@@ -75,6 +75,9 @@ export default function userModel() {
       getPlaylists(): Promise<Array> {
         return uw.playlists.getUserPlaylists(this);
       }
+      getPlaylistsContainingMedia(media): Promise<Array> {
+        return uw.playlists.getUserPlaylistsContainingMedia(this, media);
+      }
 
       getPlaylist(id): Promise {
         return uw.playlists.getUserPlaylist(this, id);
